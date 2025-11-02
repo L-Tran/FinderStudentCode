@@ -1,9 +1,9 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date   | Time  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Update |
+|:-------|:-----:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Oct 30 | 2-3pm | We had most of a class period to work, so I started to brainstorm because I wanted to use V1 to think of an original solution. At first, I had no idea how I was going to code this, but had an idea of using a hashset. However, because hashsets are not allowed for V1, I wanted to make my own implementation using hashing. Hannah though of the smart idea of hashing the keys and then putting them into a TST. I copied and pasted my code from previous problems sets. |
+|        |       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
