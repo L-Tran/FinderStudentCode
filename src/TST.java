@@ -15,7 +15,7 @@ public class TST {
     }
 
     // Insert word
-    public void insert(String word) {
+    public void insert(String word, String value) {
         TSTNode current = root;
         // Counter for current letter
         int i = 0;
@@ -46,7 +46,7 @@ public class TST {
             else {
                 // Make sure the end of the word is not reached
                 if(i + 1 == word.length()) {
-                    current.setWord(true);
+                    current.setWord(value);
                     break;
                 }
                 // Iterate to next letter of word
@@ -62,11 +62,11 @@ public class TST {
             }
         }
         // Set last node to true to make the word true
-        current.setWord(true);
+        current.setWord(value);
     }
 
     // Search for word
-    public boolean search(String word) {
+    public String search(String word) {
         TSTNode current = root;
         int i = 0;
         // Make sure current node is not null
@@ -97,7 +97,7 @@ public class TST {
             }
         }
         // Return false if it is null
-        return false;
+        return "INVALID KEY";
     }
 
 }

@@ -1,6 +1,6 @@
 public class TSTNode {
     // Instance variables
-    private boolean isWord;
+    private String isWord;
     private TSTNode[] children;
     private char letter;
 
@@ -9,7 +9,7 @@ public class TSTNode {
         letter = c;
         // Each node has 3 children for each direction
         children = new TSTNode[3];
-        isWord = false;
+        isWord = null;
     }
 
     // Getters & Setters
@@ -17,7 +17,7 @@ public class TSTNode {
         return children;
     }
 
-    public boolean isWord() {
+    public String isWord() {
         return isWord;
     }
 
@@ -25,7 +25,7 @@ public class TSTNode {
         return letter;
     }
 
-    public void setWord(boolean bool) {
-        isWord = bool;
+    public void setWord(String word) {
+        isWord = word;
     }
 }
