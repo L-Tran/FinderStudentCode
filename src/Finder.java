@@ -1,7 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
+
+import static java.util.Objects.hash;
 
 /**
  * Finder
@@ -37,8 +38,8 @@ public class Finder {
 //        hash the key
 //        if it is found, return its value
 //        otherwise, return "INVALID KEY"
-        if(data.get(hash(key)) != null) {
-            return data.get(hash(key));
+        if(data.get(key) != null) {
+            return data.get(key);
         }
         else {
             return INVALID;

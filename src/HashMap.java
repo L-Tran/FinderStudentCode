@@ -9,9 +9,13 @@ public class HashMap {
     String[] keys;
     String[] values;
 
+    public HashMap() {
+        tableSize = DEFAULT_TABLE_SIZE;
+
+    }
 
 
-    public static long hash(String s) {
+    public long hash(String s) {
         int length = s.length();
         long h = 0;
         // Preform Horner's Method
@@ -22,13 +26,15 @@ public class HashMap {
     }
 
     void add(String key, String value) {
+        // Linear Probing
 
     }
     String get(String key) {
+        // return value of key
 
     }
     void resize() {
-
+        tableSize *= 2;
     }
 
 }
