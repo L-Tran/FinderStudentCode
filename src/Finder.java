@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Finder
@@ -14,38 +15,34 @@ import java.util.ArrayList;
 public class Finder {
 
     private static final String INVALID = "INVALID KEY";
-    public static final int EXTENDED_ASCII = 256;
-    public static final long P = 29245776433644439L;
-    private TST data;
+    public HashMap data;
 
     public Finder() {}
 
     public void buildTable(BufferedReader br, int keyCol, int valCol) throws IOException {
-        // Hash every Key
-        // Put keys into TST with end node with value
-        data = new TST();
+//        hash each key, then add to the map
+//        when necessary, double the table size
         String line;
         String[] dataset = {};
+        data = new HashMap();
         while((line = br.readLine()) != null) {
             dataset = line.split(",");
-            data.insert(Long.toString(hash(dataset[keyCol])), dataset[valCol]);
-
+            data.add(dataset[keyCol], dataset[valCol]);
         }
         br.close();
     }
 
-    public static long hash(String s) {
-        int length = s.length();
-        long h = 0;
-        // Preform Horner's Method
-        for (int i = 0; i < length; i++) {
-            h = (h * EXTENDED_ASCII + s.charAt(i)) % P;
-        }
-        return h;
-    }
 
     public String query(String key){
-        return data.search(Long.toString(hash(key)));
+//        hash the key
+//        if it is found, return its value
+//        otherwise, return "INVALID KEY"
+        if(data.get(hash(key)) != null) {
+            return data.get(hash(key));
+        }
+        else {
+            return INVALID;
+        }
     }
 }
 
