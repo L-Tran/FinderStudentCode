@@ -1,8 +1,5 @@
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.ArrayList;
-
-import static java.util.Objects.hash;
 
 /**
  * Finder
@@ -21,8 +18,7 @@ public class Finder {
     public Finder() {}
 
     public void buildTable(BufferedReader br, int keyCol, int valCol) throws IOException {
-//        hash each key, then add to the map
-//        when necessary, double the table size
+        // Read every key and value into HashMap
         String line;
         String[] dataset = {};
         data = new HashMap();
@@ -35,9 +31,7 @@ public class Finder {
 
 
     public String query(String key){
-//        hash the key
-//        if it is found, return its value
-//        otherwise, return "INVALID KEY"
+        // Return the value at key
         if(data.get(key) != null) {
             return data.get(key);
         }
